@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TypeMaster | Home</title>
+  <link rel="stylesheet" href="/static/styles/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="data:,"> <!-- Removes unwanted tab icon -->
+</head>
+
+<body class="bg-[#f8fbfc] text-[#0d171c] font-sans">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-10 py-4 border-b border-[#e7eff4] bg-white shadow">
+    <div class="flex items-center gap-2 font-bold text-xl">
+      <!-- Optional logo icon (uncomment if needed) -->
+      <!--
+      <svg class="w-6 h-6 text-[#0ca5f2]" fill="currentColor" viewBox="0 0 48 48">
+        <path d="M24 4C25.78 14.22 33.78 22.22 44 24C33.78 25.78 25.78 33.78 24 44C22.22 33.78 14.22 25.78 4 24C14.22 22.22 22.22 14.22 24 4Z"/>
+      </svg>
+      -->
+      <span>TypeMaster</span>
+    </div>
+    <nav class="flex gap-6 text-md font-medium">
+      <span class="text-blue-500 font-bold">Home</span>
+      <a href="/typing-test.html" class="hover:text-blue-500">Typing Test</a>
+      <a href="/game/word-game.html" class="hover:text-blue-500">Typing Game</a>
+      <a href="/status/leaderboard.html" class="hover:text-blue-500">Leaderboard</a>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="bg-white p-10 text-center">
+    <img src="/static/assets/banner.png" alt="Banner" class="mx-auto w-full max-w-3xl rounded-lg shadow-lg" />
+    <h1 class="text-4xl font-bold mt-6">Welcome to TypeMaster</h1>
+    <p class="text-lg text-[#4a5568] mt-2">Sharpen your typing skills with fun games and competitive speed tests.</p>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-10 text-center max-w-5xl mx-auto">
+    <!-- Typing Test -->
+    <a href="/typing-test.html" class="bg-white border rounded-xl p-6 hover:shadow-lg transition">
+      <img src="/static/assets/typing-test.png" alt="Typing Test" class="w-20 mx-auto mb-4" />
+      <h2 class="text-xl font-semibold mb-2">Typing Test</h2>
+      <p class="text-[#4a5568] text-sm">Measure your speed and accuracy in real-time.</p>
+    </a>
+
+    <!-- Typing Game -->
+    <a href="/game/word-game.html" class="bg-white border rounded-xl p-6 hover:shadow-lg transition">
+      <img src="/static/assets/typing-game.png" alt="Typing Game" class="w-20 mx-auto mb-4" />
+      <h2 class="text-xl font-semibold mb-2">Typing Game</h2>
+      <p class="text-[#4a5568] text-sm">Play word scramble to boost your typing reflexes.</p>
+    </a>
+
+    <!-- Leaderboard -->
+    <a href="/status/leaderboard.html" class="bg-white border rounded-xl p-6 hover:shadow-lg transition">
+      <img src="/static/assets/leaderboard.png" alt="Leaderboard" class="w-20 mx-auto mb-4" />
+      <h2 class="text-xl font-semibold mb-2">Leaderboard</h2>
+      <p class="text-[#4a5568] text-sm">Track your progress and compete with others.</p>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-[#49819c] text-sm">
+    © 2025 TypeMaster. All rights reserved.
+  </footer>
+
+</body>
+</html>

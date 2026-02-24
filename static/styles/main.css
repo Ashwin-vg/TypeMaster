@@ -1,0 +1,141 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f9fc;
+  color: #0d171c;
+}
+
+header, footer {
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #0d171c;
+  font-weight: 500;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+textarea, input[type="text"], input[type="number"] {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #0ca5f2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+button:hover {
+  background-color: #099ce0;
+}
+
+/* Typing Test Stats */
+.stat-box {
+  border: 1px solid #dadbdd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+/* ====== Word Game Specific Styles ====== */
+
+/* Game Container */
+#gameArea {
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 120px;
+  margin-top: 20px;
+}
+
+/* Result text */
+#result {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Game mode buttons */
+#gameModes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#gameModes button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #0ca5f2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#gameModes button:hover {
+  background-color: #098cce;
+}
+
+/* Score and Streak */
+#score, #streak {
+  font-weight: bold;
+  color: #0d171c;
+  margin-right: 1rem;
+}
+
+/* Table (Leaderboard) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+table, th, td {
+  border: 1px solid #cbd5e0;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  #gameModes {
+    flex-direction: column;
+  }
+}

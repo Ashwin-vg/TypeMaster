@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Typing Games | TypeMaster</title>
+  <link rel="stylesheet" href="/static/styles/main.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+       <a href="/typing-test.html" class="text-[#0d171c] font-medium hover:underline">Typing Test</a>
+      <a href="/static/game/word-game.html">Typing Game</a>
+      <a href="/static/status/leaderboard.html">Leaderboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Typing Games</h1>
+    <div>
+      <button id="btn-unscramble">Word Unscramble</button>
+      <button id="btn-synonym">Synonym Match</button>
+      <button id="btn-challenge">Typing Challenge</button>
+    </div>
+
+    <div id="game-area" style="margin-top: 1rem;"></div>
+    <div id="game-input"></div>
+    <p id="game-result" style="font-weight: bold;"></p>
+    <p id="score-display">Score: 0 | Streak: 0</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 TypeMaster</p>
+  </footer>
+
+  <script src="/static/scripts/word-game.js"></script>
+</body>
+</html>

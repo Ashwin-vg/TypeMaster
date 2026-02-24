@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaderboard | TypeMaster</title>
+  <link rel="stylesheet" href="/static/styles/main.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f8fbfc] font-sans">
+
+ <!-- Header -->
+<header class="flex justify-between items-center px-10 py-4 border-b border-[#e7eff4] bg-white">
+  <div class="flex items-center gap-2 text-[#0d171c] font-bold text-lg">
+    <!-- Logo removed temporarily -->
+    <span>TypeMaster</span>
+  </div>
+  <nav class="flex gap-6">
+    <a href="/" class="text-[#0d171c] font-medium hover:underline">Home</a>
+    <a href="/typing-test.html" class="text-[#0d171c] font-medium hover:underline">Typing Test</a>
+    <a href="/game/word-game.html" class="text-[#0d171c] font-medium hover:underline">Typing Game</a>
+    <a href="/status/leaderboard.html" class="text-[#0d171c] font-medium hover:underline">Leaderboard</a>
+  </nav>
+</header>
+
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-3xl font-bold text-[#0d171c] mb-6 text-center">Leaderboard</h1>
+    <div class="overflow-x-auto rounded-lg shadow">
+      <table class="min-w-full bg-white border border-[#dadbdd]">
+        <thead class="bg-[#f1f5f9] text-[#0d171c]">
+          <tr>
+            <th class="py-3 px-4 text-left">Name</th>
+            <th class="py-3 px-4 text-left">WPM</th>
+            <th class="py-3 px-4 text-left">Accuracy</th>
+            <th class="py-3 px-4 text-left">Characters</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body" class="text-[#0d171c]">
+          <!-- Filled by JS -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-10 text-[#49819c] text-sm">
+    © 2025 TypeMaster. All rights reserved.
+  </footer>
+
+  <!-- Script to fetch leaderboard -->
+  <script>
+    async function loadLeaderboard() {
+      try {
+        const res = await fetch("/leaderboard");
+        const data = await res.json();
+        const body = document.getElementById("leaderboard-body");
+        body.innerHTML = "";
+
+        data.forEach(entry => {
+          const row = `
+            <tr class="border-t border-[#e0e0e0] hover:bg-[#f9fafb]">
+              <td class="py-2 px-4">${entry.name}</td>
+              <td class="py-2 px-4">${entry.wpm}</td>
+              <td class="py-2 px-4">${entry.accuracy}%</td>
+              <td class="py-2 px-4">${entry.characters}</td>
+            </tr>`;
+          body.innerHTML += row;
+        });
+      } catch (error) {
+        console.error("Error loading leaderboard:", error);
+      }
+    }
+
+    loadLeaderboard();
+  </script>
+</body>
+</html>
+
