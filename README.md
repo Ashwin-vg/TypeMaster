@@ -1,34 +1,50 @@
-# 🚀 TypeMaster
+# 🚀 TypeMaster – Full-Stack Typing Speed Test Platform
 
-A full-stack typing speed test platform built using **HTML, CSS, JavaScript, and FastAPI**.
+TypeMaster is a full-stack web application designed to help users improve their typing speed and accuracy through real-time performance tracking and interactive word-based challenges.
 
-TypeMaster helps users improve typing speed and accuracy through real-time WPM tracking, interactive word games, and a competitive leaderboard system.
+The project combines a responsive frontend interface with a FastAPI backend to handle score submission and leaderboard management.
+
+This application demonstrates frontend development, backend API integration, real-time calculation logic, and full project structuring.
 
 ---
 
-## 🌟 Features
+## 🌟 Key Features
 
-- ⚡ Real-time WPM (Words Per Minute) calculation  
-- 🎯 Accuracy tracking  
-- ⌨️ Live character counter  
-- 🧩 Word Unscramble game  
-- 📚 Synonym challenge mode  
-- 🏆 Leaderboard with backend integration  
-- 🔁 Restart & result submission functionality  
+### ⌨️ Typing Speed Test
+- Real-time WPM (Words Per Minute) calculation  
+- Accuracy percentage tracking  
+- Live character count  
+- Auto timer start on first keystroke  
+- Restart functionality  
+- Result submission to backend  
+
+### 🎮 Interactive Word Games
+- Word Unscramble challenge  
+- Synonym challenge mode  
+- Sentence typing practice  
+- Score & streak tracking  
+- Automatic next challenge loading  
+
+### 🏆 Leaderboard System
+- Stores submitted user results  
+- Displays WPM, Accuracy, and Character count  
+- Backend-powered API integration  
+- Dynamic table rendering  
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend**
-- HTML
-- CSS
-- TailwindCSS
-- JavaScript
+### Frontend
+- HTML5  
+- CSS3  
+- Tailwind CSS  
+- Vanilla JavaScript  
 
-**Backend**
-- Python
-- FastAPI
+### Backend
+- Python  
+- FastAPI  
+- REST API Endpoints  
 
 ---
 
@@ -37,60 +53,110 @@ TypeMaster helps users improve typing speed and accuracy through real-time WPM t
 ```
 TypeMaster/
 │
-├── backend/           # FastAPI backend logic
-├── static/            # Frontend assets (HTML, CSS, JS)
+├── backend/                 # FastAPI backend logic
+├── static/                  # Frontend files
 │   ├── styles/
 │   ├── scripts/
+│   ├── index.html
+│   ├── typing-test.html
+│   ├── game/
+│   └── status/
 │
-└── main.py            # Application entry point
+├── assets/                  # Screenshots
+│   ├── home.png
+│   ├── typing-test.png
+│   ├── leaderboard.png
+│   ├── game1.png
+│   ├── game2.png
+│   └── game3.png
+│
+└── main.py                  # Application entry point
 ```
+
+---
+
+## 🔌 API Endpoints
+
+| Method | Endpoint        | Description |
+|--------|----------------|------------|
+| POST   | `/submit`      | Submit typing result |
+| GET    | `/leaderboard` | Fetch leaderboard data |
 
 ---
 
 ## ⚙️ How To Run Locally
 
-1. Clone the repository:
-
+### 1️⃣ Clone Repository
 ```
 git clone https://github.com/Ashwin-vg/TypeMaster.git
 cd TypeMaster
 ```
 
-2. Install dependencies:
-
+### 2️⃣ Install Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-3. Run the FastAPI server:
-
+### 3️⃣ Start FastAPI Server
 ```
 uvicorn main:app --reload
 ```
 
-4. Open browser:
-
+### 4️⃣ Open in Browser
 ```
 http://127.0.0.1:8000
 ```
 
 ---
 
-## 🎯 Future Improvements
+## 📸 Screenshots
 
-- Deploy backend live
-- Add user authentication
-- Add difficulty levels
-- Improve UI animations
-- Add database persistence
+### 🏠 Home Page
+![Home Page](assets/home.png)
+
+### ⌨️ Typing Test
+![Typing Test](assets/typing-test.png)
+
+### 🏆 Leaderboard
+![Leaderboard](assets/leaderboard.png)
+
+### 🎮 Word Game
+![Game 1](assets/game1.png)
+![Game 2](assets/game2.png)
+![Game 3](assets/game3.png)
+
+---
+
+## 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- Frontend–Backend integration  
+- REST API communication  
+- Real-time performance calculations  
+- JavaScript state handling  
+- FastAPI backend development  
+- Project structuring & version control  
+- Git-based deployment workflow  
+
+---
+
+## 🚀 Future Improvements
+
+- Database integration (PostgreSQL / SQLite)  
+- User authentication system  
+- Difficulty levels  
+- UI animation enhancements  
+- Cloud deployment (Render / Railway)  
 
 ---
 
 ## 👨‍💻 Author
 
 **Ashwin V G**  
-B.Tech CSE Student | Frontend Developer | Backend Learner | Cybersecurity Enthusiast  
+B.Tech CSE Student  
+Frontend Developer | Backend Learner | Cybersecurity Enthusiast  
 
 ---
 
-⭐ If you like this project, consider giving it a star!
+⭐ If you found this project interesting, consider giving it a star!
