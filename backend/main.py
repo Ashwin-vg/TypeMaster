@@ -3,28 +3,32 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
+import os
 
 app = FastAPI()
 
-# ✅ Corrected path to static folder
-app.mount("/static", StaticFiles(directory="../static"), name="static")
+# Correct absolute path to static folder
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(BASE_DIR, "..", "static")
+
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 # Serve HTML pages
-@app.get("/", response_class=FileResponse)
+@app.get("/")
 async def home():
-    return "../static/index.html"
+    return FileResponse(os.path.join(STATIC_DIR, "index.html"))
 
-@app.get("/typing-test.html", response_class=FileResponse)
+@app.get("/typing-test.html")
 async def typing_test():
-    return "../static/typing-test.html"
+    return FileResponse(os.path.join(STATIC_DIR, "typing-test.html"))
 
-@app.get("/game/word-game.html", response_class=FileResponse)
+@app.get("/game/word-game.html")
 async def word_game():
-    return "../static/game/word-game.html"
+    return FileResponse(os.path.join(STATIC_DIR, "game", "word-game.html"))
 
-@app.get("/status/leaderboard.html", response_class=FileResponse)
+@app.get("/status/leaderboard.html")
 async def leaderboard_page():
-    return "../static/status/leaderboard.html"
+    return FileResponse(os.path.join(STATIC_DIR, "status", "leaderboard.html"))
 
 # Leaderboard backend logic
 class Result(BaseModel):
